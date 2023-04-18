@@ -1,4 +1,4 @@
-### Copie o codigo abaixo e cole no Terminal como root no CENTOS7 64BITS
+### Copie o codigo abaixo e cole no Terminal do CENTOS-7 64BITS
 ```
 cd /usr/src/
 yum install -y nano wget git
