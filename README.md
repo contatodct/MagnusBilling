@@ -2,7 +2,7 @@
 MagnusBilling SIPTI 
 ########################
 
-### Installing
+### INSTALAÇÃO
 ```
 cd /usr/src/
 yum install -y nano wget git
