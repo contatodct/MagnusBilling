@@ -1,8 +1,4 @@
-########################
-MagnusBilling SIPTI 
-########################
-
-### INSTALAÇÃO
+### Copie o codigo abaixo e cole no Terminal como root no CENTOS7 64BITS
 ```
 cd /usr/src/
 yum install -y nano wget git
