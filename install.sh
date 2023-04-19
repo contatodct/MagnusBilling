@@ -184,8 +184,8 @@ fi
 
 
 mkdir -p /var/www/html/
-mv mbilling /var/www/html/ mbilling
-wget --no-check-certificate https://dctsistemas.com/dist/sipti/MagnusBilling-current.tgz
+mv /root/mbilling /var/www/html/mbilling
+#wget --no-check-certificate https://dctsistemas.com/dist/sipti/MagnusBilling-current.tgz
 
 echo
 echo '----------- Install PJPROJECT ----------'
