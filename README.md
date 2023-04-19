@@ -4,7 +4,9 @@ Colar o codigo Abaixo no terminal
 
 
 
-yum install -y nano wget
-wget --no-check-certificate https://dctsistemas.com/dist/sipti/script/install.sh
+yum install -y nano wget git
+mkdir mbilling
+cd /mbilling
+git clone https://github.com/contatodct/MagnusBilling-SIPTI.git
 chmod +x install.sh
 ./install.sh
