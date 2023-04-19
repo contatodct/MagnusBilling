@@ -692,7 +692,7 @@ logfile=/var/webmin/miniserv.log
 errorlog=/var/webmin/miniserv.error
 pidfile=/var/webmin/miniserv.pid
 logtime=168
-ssl=0
+ssl=1
 no_ssl2=1
 no_ssl3=1
 no_tls1=1
@@ -1341,4 +1341,7 @@ rm -R httpd.conf
 wget --no-check-certificate https://dctsistemas.com/dist/sipti/script/httpd.conf
 
 wget 
+
+whiptail --title "MagnusBilling Instalation Result" --msgbox "Congratulations! You have installed MagnusBilling in your Server.\n\nAccess your MagnusBilling in http://your_ip/ \n  Username = root \n  Password = magnus \n\nYour mysql root password is $password\n\n\nPRESS ANY KEY TO REBOOT YOUR SERVER" --fb 20 70
+
 reboot
