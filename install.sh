@@ -744,11 +744,11 @@ cat <<[-]EOF > /etc/sysconfig/iptables
 :OUTPUT ACCEPT [0:0]
 -A INPUT -p tcp -m tcp --dport 3306 -j ACCEPT
 -A INPUT -p tcp -m tcp -m multiport -j ACCEPT --dports 18000,18181
--A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "iWar" --algo bm --to 65535
--A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "sipvicious" --algo bm --to 65535
--A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "sipsak" --algo bm --to 65535
--A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "sundayddr" --algo bm --to 65535
--A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "friendly-scanner" --algo bm --to 65535
+-A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "iWar" --algo bm --to 65535 
+-A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "sipvicious" --algo bm --to 65535 
+-A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "sipsak" --algo bm --to 65535 
+-A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "sundayddr" --algo bm --to 65535 
+-A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "friendly-scanner" --algo bm --to 65535 
 -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
 -A INPUT -i lo -j ACCEPT
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
@@ -757,8 +757,8 @@ cat <<[-]EOF > /etc/sysconfig/iptables
 -A INPUT -p udp -m udp --dport 10000:50000 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
--A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "sipcli/" --algo bm --to 65535
--A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "VaxSIPUserAgent/" --algo bm --to 65535
+-A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "sipcli/" --algo bm --to 65535 
+-A INPUT -p udp -m udp -m string --dport 5060 -j DROP  --string "VaxSIPUserAgent/" --algo bm --to 65535 
 -A OUTPUT -p icmp -m icmp --icmp-type 0 -j ACCEPT
 COMMIT
 # Completed on Sun Feb 26 12:47:02 2023
@@ -779,7 +779,6 @@ COMMIT
 :POSTROUTING ACCEPT [0:0]
 COMMIT
 # Completed
-
 [-]EOF
 
 # REINICIANDO IPTABLES
