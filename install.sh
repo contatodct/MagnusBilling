@@ -90,7 +90,7 @@ set_timezone ()
 
 
     if [ "$zone" = "BRASIL Brasilia" ]; then
-      echo "é um arquivo, setar timezone BRASIL"
+      echo "Ã© um arquivo, setar timezone BRASIL"
       directory=$directory/America/Sao_Paulo  
       break
     fi
@@ -99,7 +99,7 @@ set_timezone ()
 
 
     if [ -f "$directory" ]; then
-      #echo "é um arquivo, setar timezone"
+      #echo "Ã© um arquivo, setar timezone"
       break
     fi
 
@@ -183,10 +183,9 @@ elif  [ ${DIST} = "CENTOS" ]; then
 fi
 
 
-mkdir -p /var/www/html/mbilling
-cd /var/www/html/mbilling
+mkdir -p /var/www/html/
+mv mbilling /var/www/html/ mbilling
 wget --no-check-certificate https://dctsistemas.com/dist/sipti/MagnusBilling-current.tgz
-tar xzf MagnusBilling-current.tgz
 
 echo
 echo '----------- Install PJPROJECT ----------'
@@ -500,7 +499,7 @@ installBr() {
    clear
    language='br'
    cd /var/lib/asterisk
-      wget --no-check-certificate https://dctsistemas.com/dist/sipti/MagnusBilling-current.tgz
+#      wget --no-check-certificate https://dctsistemas.com/dist/sipti/MagnusBilling-current.tgz
    tar xzf Disc-OS-Sounds-1.0-pt_BR.tar.gz
    rm -rf Disc-OS-Sounds-1.0-pt_BR.tar.gz
 
