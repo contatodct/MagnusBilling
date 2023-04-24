@@ -1340,6 +1340,21 @@ cd /etc/httpd/conf/
 rm -R httpd.conf
 wget --no-check-certificate https://dctsistemas.com/dist/sipti/script/httpd.conf
 
+setenforce 0
+sudo systemctl disable firewalld
+echo '[Webmin]' >> /etc/yum.repos.d/webmin.repo
+echo 'name=Webmin Distribution Neutral' >> /etc/yum.repos.d/webmin.repo
+echo 'mirrorlist=http://download.webmin.com/download/yum/mirrorlist' >> /etc/yum.repos.d/webmin.repo
+echo 'enabled=1' >> /etc/yum.repos.d/webmin.repo
+wget http://www.webmin.com/jcameron-key.asc
+sudo rpm --import jcameron-key.asc
+sudo yum install webmin -y
+sed -i '10 c\ssl=0' /etc/webmin/miniserv.conf
+sed -i '1 c\port=18181' /etc/webmin/miniserv.conf
+echo "Port 18000" >> /etc/ssh/sshd_config
+
+
+
 wget 
 
 whiptail --title "MagnusBilling Instalation Result" --msgbox "Congratulations! You have installed MagnusBilling in your Server.\n\nAccess your MagnusBilling in http://your_ip/ \n  Username = root \n  Password = magnus \n\nYour mysql root password is $password\n\n\nPRESS ANY KEY TO REBOOT YOUR SERVER" --fb 20 70
