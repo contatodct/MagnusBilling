@@ -1,5 +1,5 @@
 # INSTALAR CENTOS7 64Bits Minimal
-#Colar o codigo Abaixo no terminal
+_ Colar o codigo Abaixo no terminal
 
 - yum install -y nano wget git
 - git clone https://github.com/contatodct/MagnusBilling-SIPTI.git
